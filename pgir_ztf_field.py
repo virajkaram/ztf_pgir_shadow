@@ -59,3 +59,5 @@ if __name__ == '__main__':
     print("fields =", [int(x['ID']) for x in pgir_matched_fields])
     print("ra =", [float(x['RA']) for x in pgir_matched_fields])
     print("dec =", [float(x['Dec']) for x in pgir_matched_fields])
+    print('##########################################')
+    print('Saved plot to pgir_fields.pdf')
