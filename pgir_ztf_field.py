@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import healpy as hp
 from ztf_fields import show_fields
-from astropy.time import Time
 import argparse
 
 
@@ -57,6 +56,6 @@ if __name__ == '__main__':
         args.ztf_field_id, seplimit=args.separation * u.deg, plot=True)
     print('##########################################')
     print('PGIR field details')
-    print("fields =", [x['ID'] for x in pgir_matched_fields])
-    print("ra =", [x['RA'] for x in pgir_matched_fields])
-    print("dec =", [x['Dec'] for x in pgir_matched_fields])
+    print("fields =", [int(x['ID']) for x in pgir_matched_fields])
+    print("ra =", [float(x['RA']) for x in pgir_matched_fields])
+    print("dec =", [float(x['Dec']) for x in pgir_matched_fields])
